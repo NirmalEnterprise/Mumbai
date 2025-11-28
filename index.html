@@ -6,93 +6,93 @@
 <title>Nirmal Enterprise — Shuttering & Centering</title>
 <meta name="description" content="Nirmal Enterprise - Premium shuttering & centering contractor" />
 <style>
-  :root{
-    --accent:#f1c40f;
-    --bg:#0d0d0d;
-    --card:#111;
-    --muted:#bdbdbd;
-    --text:#ffffff;
-  }
-  html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
-  /* PRELOADER */
-  #preloader{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:var(--bg);z-index:99999}
-  #preloader .spinner{width:64px;height:64px;border-radius:50%;border:6px solid var(--accent);border-top-color:transparent;animation:spin 1s linear infinite}
-  @keyframes spin{to{transform:rotate(360deg)}}
+:root{
+  --accent:#f1c40f;
+  --bg:#0d0d0d;
+  --card:#111;
+  --muted:#bdbdbd;
+  --text:#ffffff;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
 
-  /* CONTAINER */
-  .container{max-width:1100px;margin:0 auto;padding:20px}
+/* PRELOADER */
+#preloader{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:var(--bg);z-index:99999}
+#preloader .spinner{width:64px;height:64px;border-radius:50%;border:6px solid var(--accent);border-top-color:transparent;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
 
-  /* HEADER */
-  header{background:#000;border-bottom:3px solid var(--accent);position:sticky;top:0;z-index:999;backdrop-filter:blur(6px)}
-  .topbar{display:flex;align-items:center;gap:16px;padding:12px 20px}
-  .brand{display:flex;align-items:center;gap:12px}
-  .brand img{width:70px;height:auto;border-radius:8px;border:2px solid var(--accent);background:#fff}
-  .brand h1{font-size:20px;margin:0;color:var(--accent);letter-spacing:0.6px}
-  nav{margin-left:auto;display:flex;gap:12px;align-items:center}
-  nav a{color:var(--accent);text-decoration:none;font-weight:600;padding:6px 8px;border-radius:6px}
-  nav a:hover{color:#fff;background:rgba(241,196,15,0.06)}
-  .small{font-size:13px;color:var(--muted)}
+/* LAYOUT */
+.container{max-width:1100px;margin:0 auto;padding:18px}
 
-  /* THEME TOGGLE */
-  .theme-toggle{margin-left:8px;background:var(--accent);border-radius:999px;padding:8px 12px;color:#000;font-weight:700;cursor:pointer;border:none}
+/* HEADER */
+header{background:#000;border-bottom:3px solid var(--accent);position:sticky;top:0;z-index:999;backdrop-filter:blur(6px)}
+.topbar{display:flex;align-items:center;gap:16px;padding:12px 18px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:72px;height:auto;border-radius:8px;border:2px solid var(--accent);background:#fff}
+.brand h1{font-size:20px;margin:0;color:var(--accent);letter-spacing:0.6px}
+nav{margin-left:auto;display:flex;gap:12px;align-items:center}
+nav a{color:var(--accent);text-decoration:none;font-weight:600;padding:6px 8px;border-radius:6px}
+nav a:hover{color:#fff;background:rgba(241,196,15,0.06)}
+.small{font-size:13px;color:var(--muted)}
+.theme-toggle{margin-left:8px;background:var(--accent);border-radius:999px;padding:8px 12px;color:#000;font-weight:700;cursor:pointer;border:none}
 
-  /* SLIDER */
-  .slider{margin:18px auto;border-radius:12px;border:2px solid var(--accent);overflow:hidden}
-  .slides{display:flex;width:500%;animation:slide 20s infinite linear}
-  .slides img{width:100%;height:340px;object-fit:cover;display:block}
-  @keyframes slide{
-    0%{transform:translateX(0)}20%{transform:translateX(0)}25%{transform:translateX(-100%)}45%{transform:translateX(-100%)}50%{transform:translateX(-200%)}70%{transform:translateX(-200%)}75%{transform:translateX(-300%)}95%{transform:translateX(-300)}100%{transform:translateX(0)}
-  }
+/* SLIDER */
+.slider{margin:18px auto;border-radius:12px;border:2px solid var(--accent);overflow:hidden}
+.slides{display:flex;width:500%;animation:slide 18s infinite linear}
+.slides img{width:100%;height:340px;object-fit:cover;display:block}
+@keyframes slide{
+  0%{transform:translateX(0)}20%{transform:translateX(0)}25%{transform:translateX(-100%)}45%{transform:translateX(-100%)}50%{transform:translateX(-200%)}70%{transform:translateX(-200%)}75%{transform:translateX(-300%)}95%{transform:translateX(-300)}100%{transform:translateX(0)}
+}
 
-  /* SECTIONS */
-  section{padding:28px 0}
-  .section-title{color:var(--accent);font-size:26px;text-align:center;margin:6px 0 18px}
-  .about p{color:var(--muted);max-width:900px;margin:0 auto;text-align:center;font-size:17px;line-height:1.6}
+/* SECTIONS */
+section{padding:28px 0}
+.section-title{color:var(--accent);font-size:26px;text-align:center;margin:6px 0 18px}
+.about p{color:var(--muted);max-width:900px;margin:0 auto;text-align:center;font-size:17px;line-height:1.6}
 
-  /* SERVICES */
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;max-width:1000px;margin:0 auto}
-  .card{background:var(--card);padding:18px;border-radius:10px;border:1px solid rgba(241,196,15,0.06);text-align:center;transition:transform .22s}
-  .card:hover{transform:translateY(-6px)}
-  .card .icon{font-size:36px;margin-bottom:10px}
+/* SERVICES */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;max-width:1000px;margin:0 auto}
+.card{background:var(--card);padding:18px;border-radius:10px;border:1px solid rgba(241,196,15,0.06);text-align:center;transition:transform .22s}
+.card:hover{transform:translateY(-6px)}
+.card .icon{font-size:36px;margin-bottom:10px}
 
-  /* GALLERY */
-  .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;max-width:1100px;margin:0 auto}
-  .gallery-grid img{width:100%;height:160px;object-fit:cover;border-radius:8px;border:2px solid var(--accent);cursor:pointer;transition:transform .18s}
-  .gallery-grid img:hover{transform:scale(1.03)}
+/* GALLERY */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;max-width:1100px;margin:0 auto}
+.gallery-grid img{width:100%;height:160px;object-fit:cover;border-radius:8px;border:2px solid var(--accent);cursor:pointer;transition:transform .18s}
+.gallery-grid img:hover{transform:scale(1.03)}
 
-  /* CONTACT */
-  .contact-wrap{max-width:820px;margin:0 auto;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-  form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  form .full{grid-column:1/-1}
-  input,textarea{width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#fff;font-size:15px}
-  .submit{grid-column:1/-1;display:flex;gap:10px;align-items:center}
-  button.btn{background:var(--accent);border:none;padding:12px 18px;border-radius:999px;font-weight:800;cursor:pointer}
+/* CONTACT */
+.contact-wrap{max-width:820px;margin:0 auto;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+form .full{grid-column:1/-1}
+input,textarea{width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#fff;font-size:15px}
+.submit{grid-column:1/-1;display:flex;gap:10px;align-items:center}
+button.btn{background:var(--accent);border:none;padding:12px 18px;border-radius:999px;font-weight:800;cursor:pointer}
 
-  /* FLOATING WHATSAPP */
-  .whatsapp{position:fixed;right:18px;bottom:18px;background:#25D366;padding:14px;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,0.4);z-index:9999}
-  .whatsapp a{display:block;color:#fff;text-decoration:none;font-weight:900;font-size:16px}
+/* WHATSAPP */
+.whatsapp{position:fixed;right:18px;bottom:18px;background:#25D366;padding:14px;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,0.4);z-index:9999}
+.whatsapp a{display:block;color:#fff;text-decoration:none;font-weight:900;font-size:16px}
 
-  /* POPUP */
-  .popup{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.85);z-index:100000;opacity:0;pointer-events:none;transition:opacity .18s}
-  .popup.open{opacity:1;pointer-events:auto}
-  .popup img{max-width:92%;max-height:92%;border-radius:10px;border:4px solid var(--accent)}
+/* POPUP */
+.popup{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.85);z-index:100000;opacity:0;pointer-events:none;transition:opacity .18s}
+.popup.open{opacity:1;pointer-events:auto}
+.popup img{max-width:92%;max-height:92%;border-radius:10px;border:4px solid var(--accent)}
 
-  /* FOOTER */
-  footer{padding:18px 0;text-align:center;border-top:2px solid var(--accent);margin-top:24px;color:var(--muted);font-size:14px}
+/* FOOTER */
+footer{padding:18px 0;text-align:center;border-top:2px solid var(--accent);margin-top:24px;color:var(--muted);font-size:14px}
 
-  /* RESPONSIVE */
-  @media (max-width:720px){
-    .slides img{height:200px}
-    .topbar{padding:10px}
-    form{grid-template-columns:1fr}
-  }
+/* RESPONSIVE */
+@media (max-width:720px){
+  .slides img{height:200px}
+  .topbar{padding:10px}
+  form{grid-template-columns:1fr}
+}
 
-  /* LIGHT THEME */
-  .light{--bg:#fafafa;--card:#fff;color:#111}
-  .light .brand h1{color:#111}
-  .light nav a{color:#111}
-  .light .gallery-grid img{border-color:#333}
-  .light footer{color:#333}
+/* LIGHT THEME */
+.light{--bg:#fafafa;--card:#fff;color:#111}
+.light .brand h1{color:#111}
+.light nav a{color:#111}
+.light .gallery-grid img{border-color:#333}
+.light footer{color:#333}
 </style>
 </head>
 <body>
@@ -103,8 +103,8 @@
 <header>
   <div class="container topbar">
     <div class="brand" aria-hidden="false">
-      <!-- LOGO (your provided logo link) -->
-      <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/main/logo%20(1).png" alt="Nirmal Enterprise logo" id="siteLogo" />
+      <!-- LOGO (put your logo at: raw.githubusercontent.com/NirmalEnterprise/Ngroup/main/logo.png) -->
+      <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/main/logo.png" alt="Nirmal Enterprise logo" id="siteLogo" />
       <div>
         <h1>Nirmal Enterprise</h1>
         <div class="small">Shuttering • Centering • Formwork</div>
@@ -124,11 +124,12 @@
 <!-- SLIDER -->
 <div class="container slider" role="region" aria-label="Project slider">
   <div class="slides" id="sliderSlides" aria-hidden="false">
-    <img src=https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/main/logo.png
-    <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/main/construction-site-sunset_23-2152006125.jpg" alt="Project 2" />
-    <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/main/j-p-centering-works-tambaram-west-chennai-centering-work-a217r.jpg" alt="Project 3" />
-    <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/main/la-cornice-monolitica-di-una-nuova-casa-in-costruzione-sul-vonn-della-gru-e-il-cielo-blu_220838-127.jpg" alt="Project 4" />
-    <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/main/update10.jpg" alt="Project 5" />
+    <!-- Use these filenames after uploading to repo root: site1.jpg .. site5.jpg -->
+    <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/main/site1.jpg" alt="Project 1" />
+    <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/main/site2.jpg" alt="Project 2" />
+    <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/main/site3.jpg" alt="Project 3" />
+    <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/main/site4.jpg" alt="Project 4" />
+    <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/main/site5.jpg" alt="Project 5" />
   </div>
 </div>
 
@@ -161,11 +162,11 @@
   <div class="container">
     <h2 class="section-title">Project Gallery</h2>
     <div class="gallery-grid" id="galleryGrid">
-      <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/main/8f3da240bd6299144c6f98ca8e39d2f3.jpg" alt="Gallery 1" />
-      <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/main/construction-site-sunset_23-2152006125.jpg" alt="Gallery 2" />
-      <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/main/j-p-centering-works-tambaram-west-chennai-centering-work-a217r.jpg" alt="Gallery 3" />
-      <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/main/la-cornice-monolitica-di-una-nuova-casa-in-costruzione-sul-vonn-della-gru-e-il-cielo-blu_220838-127.jpg" alt="Gallery 4" />
-      <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/main/update10.jpg" alt="Gallery 5" />
+      <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/main/site1.jpg" alt="Gallery 1" />
+      <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/main/site2.jpg" alt="Gallery 2" />
+      <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/main/site3.jpg" alt="Gallery 3" />
+      <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/main/site4.jpg" alt="Gallery 4" />
+      <img src="https://raw.githubusercontent.com/NirmalEnterprise/Ngroup/main/site5.jpg" alt="Gallery 5" />
     </div>
   </div>
 </section>
@@ -185,7 +186,7 @@
 
       <div class="submit full">
         <button class="btn" type="submit">Send Message</button>
-        <div style="color:var(--muted);font-size:13px;margin-left:8px">Or WhatsApp: <a href="https://wa.me/918956330327" target="_blank" style="color:var(--accent);text-decoration:none">+91 89563 30327</a></div>
+        <div style="color:var(--muted);font-size:13px;margin-left:8px">Or WhatsApp: <a href="https://wa.me/919167004003" target="_blank" style="color:var(--accent);text-decoration:none">+91 91670 04003</a></div>
       </div>
     </form>
   </div>
@@ -214,73 +215,73 @@
 </div>
 
 <script>
-  // Hide preloader after page load
-  window.addEventListener('load', ()=> {
-    const pre = document.getElementById('preloader');
-    pre.style.opacity = '0';
-    setTimeout(()=> pre.remove(), 600);
+// Hide preloader after page load
+window.addEventListener('load', ()=> {
+  const pre = document.getElementById('preloader');
+  pre.style.opacity = '0';
+  setTimeout(()=> pre.remove(), 600);
+});
+
+// Year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Gallery popup
+const gallery = document.getElementById('galleryGrid');
+const popup = document.getElementById('popup');
+const popupImg = document.getElementById('popupImg');
+gallery.querySelectorAll('img').forEach(img=>{
+  img.addEventListener('click', (e)=>{
+    popupImg.src = img.src;
+    popup.classList.add('open');
+    popup.setAttribute('aria-hidden','false');
   });
+});
+function closePopup(){
+  popup.classList.remove('open');
+  popup.setAttribute('aria-hidden','true');
+}
 
-  // Year
-  document.getElementById('year').textContent = new Date().getFullYear();
+// Theme toggle (save preference)
+const toggle = document.getElementById('themeToggle');
+function applyTheme(isLight){
+  if(isLight) document.documentElement.classList.add('light');
+  else document.documentElement.classList.remove('light');
+  toggle.textContent = isLight ? 'Dark' : 'Light';
+  toggle.setAttribute('aria-pressed', isLight);
+}
+// load saved
+const saved = localStorage.getItem('nirmal_theme') === 'light';
+applyTheme(saved);
+toggle.addEventListener('click', ()=>{
+  const isLight = !document.documentElement.classList.contains('light');
+  applyTheme(isLight);
+  localStorage.setItem('nirmal_theme', isLight ? 'light' : 'dark');
+});
 
-  // Gallery popup
-  const gallery = document.getElementById('galleryGrid');
-  const popup = document.getElementById('popup');
-  const popupImg = document.getElementById('popupImg');
-  gallery.querySelectorAll('img').forEach(img=>{
-    img.addEventListener('click', (e)=>{
-      popupImg.src = img.src;
-      popup.classList.add('open');
-      popup.setAttribute('aria-hidden','false');
-    });
-  });
-  function closePopup(){
-    popup.classList.remove('open');
-    popup.setAttribute('aria-hidden','true');
-  }
+// Contact form handler (mailto fallback)
+function handleSubmit(e){
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const msg = document.getElementById('message').value.trim();
+  if(!name||!phone||!msg){ alert('Please fill required fields'); return false; }
 
-  // Theme toggle (save preference)
-  const toggle = document.getElementById('themeToggle');
-  function applyTheme(isLight){
-    if(isLight) document.documentElement.classList.add('light');
-    else document.documentElement.classList.remove('light');
-    toggle.textContent = isLight ? 'Dark' : 'Light';
-    toggle.setAttribute('aria-pressed', isLight);
-  }
-  // load saved
-  const saved = localStorage.getItem('nirmal_theme') === 'light';
-  applyTheme(saved);
-  toggle.addEventListener('click', ()=>{
-    const isLight = !document.documentElement.classList.contains('light');
-    applyTheme(isLight);
-    localStorage.setItem('nirmal_theme', isLight ? 'light' : 'dark');
-  });
+  // Option A (quick): open user's email client
+  const subject = encodeURIComponent('Website Inquiry from ' + name);
+  const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nEmail: ${email}\n\nMessage:\n${msg}`);
+  window.location.href = `mailto:nirmalenterprises@gmail.com?subject=${subject}&body=${body}`;
 
-  // Contact form handler (mailto fallback)
-  function handleSubmit(e){
-    e.preventDefault();
-    const name = document.getElementById('name').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const msg = document.getElementById('message').value.trim();
-    if(!name||!phone||!msg){ alert('Please fill required fields'); return false; }
+  // Option B (recommended): Connect to Google Sheets or form backend
+  // To enable form submissions to Google Sheets:
+  // 1) Create a Google Form -> Responses -> Link to spreadsheet.
+  // 2) Use a service (like Make/Zapier) or the Google Forms direct POST endpoint.
+  // 3) Replace this handler to POST fetch() to that endpoint and show success message.
+  return false;
+}
 
-    // Option A (quick): open user's email client
-    const subject = encodeURIComponent('Website Inquiry from ' + name);
-    const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}\nEmail: ${email}\n\nMessage:\n${msg}`);
-    window.location.href = `mailto:nirmalenterprises@gmail.com?subject=${subject}&body=${body}`;
-
-    // Option B (recommended): Connect to Google Sheets or form backend
-    // To enable form submissions to Google Sheets:
-    // 1) Create a Google Form -> Responses -> Link to spreadsheet.
-    // 2) Use a service (like Make/Zapier) or the Google Forms direct POST endpoint.
-    // 3) Replace this handler to POST fetch() to that endpoint and show success message.
-    return false;
-  }
-
-  // Accessibility: close popup with ESC
-  document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closePopup(); });
+// Accessibility: close popup with ESC
+document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closePopup(); });
 </script>
 
 </body>
